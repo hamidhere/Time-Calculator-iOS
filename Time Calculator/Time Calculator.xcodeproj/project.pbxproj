@@ -30,9 +30,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C20137922E0E5E1A00171360 /* Exceptions for "Time Calculator" folder in "Time CalculatorUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Helpers/Extensions/DesignableUITextField.swift,
+				Helpers/Extensions/DesignableView.swift,
+				Helpers/Extensions/PaddingLable.swift,
+				"Helpers/Extensions/TextField+Extension.swift",
+				"Helpers/Extensions/UILabel+Extension.swift",
+				"Helpers/Extensions/UIView+Extension.swift",
+			);
+			target = C2E2A1562D63CCC8008D931E /* Time CalculatorUITests */;
+		};
 		C2E2A15F2D63CCC8008D931E /* Exceptions for "Time Calculator" folder in "Time Calculator" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Helpers/Extensions/DesignableUITextField.swift,
+				Helpers/Extensions/DesignableView.swift,
+				Helpers/Extensions/PaddingLable.swift,
+				"Helpers/Extensions/TextField+Extension.swift",
+				"Helpers/Extensions/UILabel+Extension.swift",
+				"Helpers/Extensions/UIView+Extension.swift",
 				Info.plist,
 			);
 			target = C2E2A1332D63CCC5008D931E /* Time Calculator */;
@@ -44,6 +62,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				C2E2A15F2D63CCC8008D931E /* Exceptions for "Time Calculator" folder in "Time Calculator" target */,
+				C20137922E0E5E1A00171360 /* Exceptions for "Time Calculator" folder in "Time CalculatorUITests" target */,
 			);
 			path = "Time Calculator";
 			sourceTree = "<group>";
