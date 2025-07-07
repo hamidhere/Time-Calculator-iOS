@@ -8,22 +8,37 @@
 import UIKit
 
 class MainVC: UIViewController {
+    //MARK: - OUTLETS -
+    @IBOutlet weak var circleView: UIView!
+    @IBOutlet weak var clockHandView: UIView!
+    
+    //MARK: - PROPERTIES -
 
+    
+    //MARK: - LIFE CYCLES -
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setCircleView()
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLayoutSubviews() {
+        setClockHandView()
     }
-    */
 
+}
+
+extension MainVC {
+    
+    func setCircleView() {
+        circleView.layer.masksToBounds = true
+        circleView.layer.borderWidth = 6
+        circleView.layer.borderColor = UIColor(named: "AmaranthBtnColor")?.cgColor
+    }
+    
+    func setClockHandView() {
+        let clockHandSize = CGSize(width: 4, height: 116)
+        clockHandView.frame = CGRect(origin: .zero, size: clockHandSize)
+        clockHandView.center = circleView.center
+    }
+    
 }

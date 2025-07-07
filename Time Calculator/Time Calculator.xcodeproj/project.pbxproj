@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C20137962E1B7E2000171360 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20137952E1B7E2000171360 /* ClockView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C2E2A14E2D63CCC8008D931E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C20137952E1B7E2000171360 /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClockView.swift; path = "Time Calculator/Helpers/Extensions/ClockView.swift"; sourceTree = "<group>"; };
 		C2E2A1342D63CCC5008D931E /* Time Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E2A14D2D63CCC8008D931E /* Time CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Time CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E2A1572D63CCC8008D931E /* Time CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Time CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +112,7 @@
 		C2E2A12B2D63CCC5008D931E = {
 			isa = PBXGroup;
 			children = (
+				C20137952E1B7E2000171360 /* ClockView.swift */,
 				C2E2A1362D63CCC5008D931E /* Time Calculator */,
 				C2E2A1502D63CCC8008D931E /* Time CalculatorTests */,
 				C2E2A15A2D63CCC8008D931E /* Time CalculatorUITests */,
@@ -268,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C20137962E1B7E2000171360 /* ClockView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,17 +8,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Time_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Time_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IcM-dM-zJM">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IcM-dM-zJM">
                                 <rect key="frame" x="76.666666666666686" y="306" width="240" height="240"/>
-                                <color key="backgroundColor" name="YellowColor"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Oj-3b-5C6">
+                                        <rect key="frame" x="115.99999999999999" y="60" width="8" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="YellowColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="LightBgColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IcM-dM-zJM" secondAttribute="height" multiplier="1:1" id="NvJ-lW-u2L"/>
                                     <constraint firstAttribute="height" constant="240" id="Odq-1K-BbM"/>
@@ -37,21 +44,28 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.89806526900000005" green="0.90594476459999995" blue="0.90196043250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="LightBgColor"/>
                         <constraints>
                             <constraint firstItem="IcM-dM-zJM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jz0-Ai-v0N"/>
                             <constraint firstItem="IcM-dM-zJM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="z2y-fb-9C7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="circleView" destination="IcM-dM-zJM" id="olf-5T-6mV"/>
+                        <outlet property="clockHandView" destination="8Oj-3b-5C6" id="gs9-VB-141"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="-23"/>
+            <point key="canvasLocation" x="138.1679389312977" y="-23.239436619718312"/>
         </scene>
     </scenes>
     <resources>
         <namedColor name="AmaranthBtnColor">
             <color red="0.8784313725490196" green="0.10196078431372549" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightBgColor">
+            <color red="0.89806526900000005" green="0.90594476459999995" blue="0.90196043250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="YellowColor">
             <color red="0.95686274509803915" green="0.78823529411764703" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
