@@ -16,15 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IcM-dM-zJM">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IcM-dM-zJM" customClass="ClockView" customModule="Time_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="76.666666666666686" y="306" width="240" height="240"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Oj-3b-5C6">
-                                        <rect key="frame" x="115.99999999999999" y="60" width="8" height="120"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" name="YellowColor"/>
-                                    </view>
-                                </subviews>
                                 <color key="backgroundColor" name="LightBgColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IcM-dM-zJM" secondAttribute="height" multiplier="1:1" id="NvJ-lW-u2L"/>
@@ -52,7 +45,6 @@
                     </view>
                     <connections>
                         <outlet property="circleView" destination="IcM-dM-zJM" id="olf-5T-6mV"/>
-                        <outlet property="clockHandView" destination="8Oj-3b-5C6" id="gs9-VB-141"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -66,9 +58,6 @@
         </namedColor>
         <namedColor name="LightBgColor">
             <color red="0.89806526900000005" green="0.90594476459999995" blue="0.90196043250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="YellowColor">
-            <color red="0.95686274509803915" green="0.78823529411764703" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

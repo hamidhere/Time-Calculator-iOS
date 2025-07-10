@@ -8,8 +8,9 @@
 import UIKit
 
 class MainVC: UIViewController {
+    
     //MARK: - OUTLETS -
-    @IBOutlet weak var circleView: UIView!
+    @IBOutlet weak var circleView: ClockView!
     @IBOutlet weak var clockHandView: UIView!
     
     //MARK: - PROPERTIES -
@@ -18,11 +19,11 @@ class MainVC: UIViewController {
     //MARK: - LIFE CYCLES -
     override func viewDidLoad() {
         super.viewDidLoad()
-        setCircleView()
+//        setCircleView()
         // Do any additional setup after loading the view.
     }
     override func viewDidLayoutSubviews() {
-        setClockHandView()
+//        setClockHandView()
     }
 
 }
