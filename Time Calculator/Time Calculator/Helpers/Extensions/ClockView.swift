@@ -8,71 +8,46 @@
 import UIKit
 
 class ClockView: UIView {
-    private let circleLayer = CAShapeLayer()
-    private let clockHandLayer = CAShapeLayer()
+    private var circleLayer = CAShapeLayer()
+    private var handLayer = CAShapeLayer()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setup()
+        clockCircle()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setup()
+        clockCircle()
+//        fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    // Initial setup for the layer
-    private func setup() {
-        // Configure the appearance of the circle layer
-        circleLayer.lineWidth = 14.0
-        circleLayer.strokeColor = UIColor(named: "AmaranthBtnColor")?.cgColor // The border color
-        circleLayer.fillColor = UIColor(named: "LightBgColor")?.cgColor   // The inside color
-        // Add it to the view's layer hierarchy
-        layer.addSublayer(circleLayer)
-        
-        clockHandLayer.lineWidth = 8.0
-        clockHandLayer.strokeColor = UIColor(named: "blackTextColor")?.cgColor
-        clockHandLayer.fillColor = UIColor(named: "yellowColor")?.cgColor
-        clockHandLayer.lineCap = .round
-        layer.addSublayer(clockHandLayer)
-    }
-    
-    // layoutSubviews is called when the view's size is finalized
     override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        pathForCloackFace()
-        
-        
-        
-        
-    }
+            super.layoutSubviews()
+            
+            
+        clockCircle()
+        }
     
-    func pathForCloackFace() {
-        // Define the center and radius based on the view's final bounds
+    func clockCircle()  {
         let centerPoint = CGPoint(x: bounds.midX, y: bounds.midY)
-        // Use the smaller dimension to ensure the circle fits
         let radius = min(bounds.width, bounds.height) / 2.0
-        
-        // Create the circular path
-        let circularPath = UIBezierPath(
-            arcCenter: centerPoint,
-            radius: radius,
-            startAngle: 0,                   // Start at the 3 o'clock position
-            endAngle: CGFloat.pi * 2,        // End after a full 360-degree rotation
-            clockwise: true
-        )
-        
-        // Update the layer's path to be this circle
-        circleLayer.path = circularPath.cgPath
-        
-        // Clock hand: draw a line from center to top of circle
-                let handPath = UIBezierPath()
+        let circlePath = UIBezierPath(arcCenter: centerPoint, radius: radius, startAngle: 0, endAngle: CGFloat.pi * 2, clockwise: true)
+        circleLayer.fillColor = UIColor(named: "BlackTxtColor")?.cgColor
+        circleLayer.strokeColor = UIColor(named: "RedTomatoColor")?.cgColor
+        circleLayer.lineWidth = 18
+        circleLayer.path = circlePath.cgPath
+        layer.addSublayer(circleLayer)
+        let handPath = UIBezierPath()
                 handPath.move(to: centerPoint)
-                handPath.addLine(to: CGPoint(x: centerPoint.x, y: centerPoint.y - radius + 10)) // 10px padding
-                clockHandLayer.path = handPath.cgPath
+                handPath.addLine(to: CGPoint(x: centerPoint.x, y: centerPoint.y - radius + 10))
+        
+        handLayer.fillColor = UIColor(named: "YellowColor")?.cgColor
+        handLayer.strokeColor = UIColor(named: "AmaranthBtnColor")?.cgColor
+        handLayer.lineWidth = 12
+        handLayer.path = handPath.cgPath
+        layer.addSublayer(handLayer)
+        
+        
     }
-    
     
 }
